@@ -16,7 +16,7 @@ A strength of Upgrow is that the architecture consists of pragmatic, tried-and-t
 other web frameworks' best practices, while forming a coherent, one-way data flow for the entire request-response cycle.
 I recommend reading the original Upgrow Architecture (next section) first for more context and better explanation,
 but if you want to delve into the code/discussion/how we can apply this at EH, keep the Upgrow architecture diagram 
-above open, and follow the READMEs and associated source files in the following order:
+below open, and follow the READMEs and associated source files in the following order:
 
 1. [app/records/README.md](app/records/README.md)
 2. [app/repositories/README.md](app/repositories/README.md)
