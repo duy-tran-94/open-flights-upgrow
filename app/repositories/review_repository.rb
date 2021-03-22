@@ -1,0 +1,2 @@
+class ReviewRepository < BaseRepository
+end
