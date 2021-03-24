@@ -6,7 +6,7 @@ module Airlines
 
     def perform(input)
       if input.valid?
-        airline = AirlineRepository.new.create(input)
+        airline = AirlineRepo.create(input)
         result.success(airline: airline)
       else
         result.failure(input.errors)

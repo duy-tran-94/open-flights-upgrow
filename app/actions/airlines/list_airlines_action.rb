@@ -5,7 +5,7 @@ module Airlines
     result :airlines
 
     def perform
-      result.success(airlines: AirlineRepository.new.all_with_reviews)
+      result.success(airlines: AirlineRepo.all_with_reviews)
     end
   end
 end
