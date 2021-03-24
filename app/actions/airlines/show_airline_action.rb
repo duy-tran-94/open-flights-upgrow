@@ -5,7 +5,12 @@ module Airlines
     result :airline
 
     def perform(slug)
-      result.success(airline: AirlineRepository.new.find_by_slug_with_reviews(slug))
+      # Discussion: AirlineRecord is a private_constant in AirlineRepo module,
+      # so accessing it from outside of AirlineRepo module will fail with a NameError
+      # ("private constant AirlineRepo::AirlineRecord referenced")
+      #
+      # AirlineRepo::AirlineRecord.first
+      result.success(airline: AirlineRepo.find_by_slug_with_reviews(slug))
     end
   end
 end

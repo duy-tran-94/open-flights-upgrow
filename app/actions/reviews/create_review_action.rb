@@ -6,7 +6,7 @@ module Reviews
 
     def perform(input)
       if input.valid?
-        review = ReviewRepository.new.create(input)
+        review = ReviewRepo.create(input)
         result.success(review: review)
       else
         result.failure(input.errors)

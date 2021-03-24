@@ -6,7 +6,7 @@ module Airlines
 
     def perform(slug, input)
       if input.valid?
-        airline = AirlineRepository.new.update_by_slug_with_reviews(slug, input)
+        airline = AirlineRepo.update_by_slug_with_reviews(slug, input)
         result.success(airline: airline)
       else
         result.failure(input.errors)

@@ -3,7 +3,7 @@
 module Airlines
   class DeleteAirlineAction < BaseAction
     def perform(slug)
-      AirlineRepository.new.delete_by_slug(slug)
+      AirlineRepo.delete_by_slug(slug)
       result.success
     end
   end

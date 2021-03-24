@@ -3,7 +3,7 @@
 module Reviews
   class DeleteReviewAction < BaseAction
     def perform(id)
-      ReviewRepository.new.delete(id)
+      ReviewRepo.delete(id)
       result.success
     end
   end
